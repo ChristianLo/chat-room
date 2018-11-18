@@ -12,7 +12,7 @@ class GenerateRandom:
         def __init__(self):
             self.data = None
             with open('data/game_of_thrones.yml', 'r') as file:
-                self.data = yaml.load(file)['en']['faker']['game_of_thrones']
+                self.data = yaml.load(file)['game_of_thrones']
 
         def character(self):
             return choice(self.data['characters'])
@@ -30,7 +30,7 @@ class GenerateRandom:
         def __init__(self):
             self.data = None
             with open('data/league_of_legends.yml', 'r') as file:
-                self.data = yaml.load(file)['en']['faker']['games']['league_of_legends']
+                self.data = yaml.load(file)['league_of_legends']
 
         def champion(self):
             return choice(self.data['champion'])
